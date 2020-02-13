@@ -18,6 +18,14 @@ export default {
       type: String,
       default: '100%'
     },
+    canvasWidth: {
+      type: String,
+      default: '100%'
+    },
+    canvasHeight: {
+      type: String,
+      default: '100%'
+    },
     customStyle: {
       type: Object
     },
@@ -184,8 +192,8 @@ export default {
       [
         createElement('canvas', {
           style: {
-            width: '100%',
-            height: '100%'
+            width: this.canvasWidth,
+            height: this.canvasHeight
           },
           ref: 'signaturePadCanvas'
         })
